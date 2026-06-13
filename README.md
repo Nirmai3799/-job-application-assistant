@@ -1,3 +1,14 @@
+---
+title: AI Job Application Assistant
+emoji: 📄
+colorFrom: blue
+colorTo: indigo
+sdk: streamlit
+sdk_version: 1.35.0
+app_file: app.py
+pinned: false
+---
+
 # AI Job Application Assistant — ATS Optimizer
 
 Upload your resume and a job description and get an ATS-optimized resume, skill gap plan, and personalized cover letter in seconds.
