@@ -34,6 +34,13 @@ from openai import OpenAI
 
 load_dotenv()
 
+st.set_page_config(
+    page_title="Job Application Assistant",
+    page_icon="\U0001f4bc",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
 # Models
 CLAUDE_MODEL = "claude-sonnet-4-6"
 OPENAI_MODEL = "gpt-4.1-mini"
@@ -645,13 +652,6 @@ def stream_cover_letter(resume_text: str, job_text: str, ats: dict):
 # ═══════════════════════════════════════════════════════════════════════════════
 # SECTION 7 — PAGE SETUP & STYLING
 # ═══════════════════════════════════════════════════════════════════════════════
-
-st.set_page_config(
-    page_title="Job Application Assistant",
-    page_icon="\U0001f4bc",
-    layout="wide",
-    initial_sidebar_state="collapsed",
-)
 
 st.markdown("""
 <style>
