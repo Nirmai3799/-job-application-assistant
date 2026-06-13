@@ -62,9 +62,13 @@ for raw_line in sample.split("\n"):
     else:
         put_text(clean(line))
 
-buf = io.BytesIO()
-buf.write(pdf.output())
-data = buf.getvalue()
+import tempfile, os as _os
+fd, tmp = tempfile.mkstemp(suffix=".pdf")
+_os.close(fd)
+pdf.output(tmp)
+with open(tmp, "rb") as f:
+    data = f.read()
+_os.unlink(tmp)
 
 with open("test_output.pdf", "wb") as f:
     f.write(data)
